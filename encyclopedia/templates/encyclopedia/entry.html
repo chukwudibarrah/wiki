@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% load markdown_filter %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    {{ content | markdown_to_html|safe}}
+{% endblock %}
